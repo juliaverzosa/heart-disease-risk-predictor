@@ -51,11 +51,49 @@ The full model pipeline is saved as:
 
 ---
 
-## How to Run the App
 
-### Prerequisites
+If you don’t have a requirements.txt file, you can manually install the necessary packages with:
 
-Make sure you have Python 3.9 or later installed. Then install dependencies:
+bash
+Copy
+Edit
+pip install streamlit scikit-learn pandas matplotlib joblib
+▶️ Running the App
+After installing the dependencies, run the app using:
 
-```bash
-pip install -r requirements.txt
+bash
+Copy
+Edit
+streamlit run app.py
+This will open the app in your default web browser at http://localhost:8501.
+
+📁 File Structure
+bash
+Copy
+Edit
+heart-disease-predictor/
+│
+├── app.py                   # Streamlit app
+├── model_pipeline.pkl       # Trained ML model (Random Forest)
+├── feature_metadata.json    # Feature metadata (numerical/categorical lists)
+├── heart_2020_uncleaned.csv # Dataset used for training
+├── requirements.txt         # List of dependencies
+├── screenshots/             # Folder with UI screenshots
+│   ├── home.png
+│   ├── form.png
+│   └── result.png
+└── README.md                # Project documentation
+📝 Notes
+The ML model is trained on the Heart Disease 2020 dataset.
+
+This tool is intended for screening and assistance, not as a definitive diagnosis.
+
+The Risk Threshold slider lets users adjust the sensitivity of the prediction.
+
+🧑‍💻 Author
+Developed by Julia Verzosa
+BS Computer Science – University of Mindanao
+GitHub Profile
+
+📄 License
+This project is licensed under the MIT License.
