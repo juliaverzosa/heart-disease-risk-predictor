@@ -1,99 +1,89 @@
+
+
 # Heart Disease Risk Predictor
 
 A user-friendly web application that uses machine learning to help identify individuals at risk for heart disease. Designed for clinicians, healthcare workers, and early screening scenarios, this tool provides an instant prediction based on lifestyle and clinical data inputs.
 
 ---
 
-## About the App
+## 🩺 About the App
 
 This project is a **heart disease risk screening tool** built with:
 
-- **Streamlit** (Python-based web app framework)
-- **scikit-learn** for model training
-- A clean and responsive UI with custom CSS
+- **Streamlit** – Python-based web app framework
+- **scikit-learn** – for model training and prediction
+- **Custom CSS** – for a clean and responsive UI
 
-Users can input patient information such as age, BMI, smoking habits, diabetic status, and more. The app instantly classifies the risk as **"At Risk"** or **"Not At Risk"** and provides a **confidence score** and a feature importance chart.
+Users can input patient information such as age, BMI, smoking habits, diabetic status, and more. The app instantly classifies the risk as **"At Risk"** or **"Not At Risk"**, provides a **confidence score**, and displays a **feature importance chart** to explain the prediction.
 
 ---
 
-## Machine Learning Model
+## 🤖 Machine Learning Model
 
 The app uses a **Random Forest Classifier** trained on the [Heart Disease 2020 dataset](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease).
 
-### Model Pipeline
+### 🔁 Model Pipeline
 
-The model pipeline includes:
-
-- **Data Cleaning**: Handling missing values and duplicates
-- **Numerical Scaling**: Using `StandardScaler`
-- **Categorical Encoding**: Using `OneHotEncoder`
-- **Classifier**: `RandomForestClassifier` (100 estimators, random_state=42)
+- **Data Cleaning**: Removed duplicates and handled missing values
+- **Numerical Scaling**: Standardized using `StandardScaler`
+- **Categorical Encoding**: Applied `OneHotEncoder`
+- **Classifier**: `RandomForestClassifier` with 100 estimators and `random_state=42`
 - **Train-Test Split**: 80% training, 20% testing
 
-> ✅ Achieved ~**accuracy of 85–87%** on test data.
+> ✅ Achieved ~**85–87% accuracy** on test data.
 
-The full model pipeline is saved as:
-- `model_pipeline.pkl` – serialized model
-- `feature_metadata.json` – stores numerical and categorical feature names
+### 📦 Model Artifacts
+
+- `model_pipeline.pkl` – Serialized model pipeline
+- `feature_metadata.json` – Stores feature names and types
 
 ---
 
-## Screenshots
+## 🖼️ Screenshots
 
-### Home Page
+### Home Page  
 ![Home](screenshots/home.png)
 
-### Input Form
+### Input Form  
 ![Form](screenshots/form.png)
 
-### Prediction Output
+### Prediction Output  
 ![Result](screenshots/result.png)
 
 ---
 
+## 🚀 Installation
 
-If you don’t have a requirements.txt file, you can manually install the necessary packages with:
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/yourusername/heart-disease-risk-predictor.git
+   cd heart-disease-risk-predictor
+   ```
 
-bash
-Copy
-Edit
-pip install streamlit scikit-learn pandas matplotlib joblib
-▶️ Running the App
-After installing the dependencies, run the app using:
+2. **Create a virtual environment**  
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-bash
-Copy
-Edit
-streamlit run app.py
-This will open the app in your default web browser at http://localhost:8501.
+3. **Install dependencies**  
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-📁 File Structure
-bash
-Copy
-Edit
-heart-disease-predictor/
-│
-├── app.py                   # Streamlit app
-├── model_pipeline.pkl       # Trained ML model (Random Forest)
-├── feature_metadata.json    # Feature metadata (numerical/categorical lists)
-├── heart_2020_uncleaned.csv # Dataset used for training
-├── requirements.txt         # List of dependencies
-├── screenshots/             # Folder with UI screenshots
-│   ├── home.png
-│   ├── form.png
-│   └── result.png
-└── README.md                # Project documentation
-📝 Notes
-The ML model is trained on the Heart Disease 2020 dataset.
+4. **Run the app**  
+   ```bash
+   streamlit run app.py
+   ```
 
-This tool is intended for screening and assistance, not as a definitive diagnosis.
+---
 
-The Risk Threshold slider lets users adjust the sensitivity of the prediction.
+## 🧪 Usage
 
-🧑‍💻 Author
-Developed by Julia Verzosa
-BS Computer Science – University of Mindanao
-GitHub Profile
+1. Launch the app in your browser.
+2. Fill in the patient information in the input form.
+3. Click **"Predict Risk"** to see the result.
+4. View the risk classification, confidence score, and feature importance chart.
 
-📄 License
-This project is licensed under the MIT License.
+---
+
