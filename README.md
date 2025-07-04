@@ -42,13 +42,13 @@ The app uses a **Random Forest Classifier** trained on the [Heart Disease 2020 d
 ## 🖼️ Screenshots
 
 ### Home Page  
-![Home](screenshots/home.png)
+![Home](img/landing.png)
 
 ### Input Form  
-![Form](screenshots/form.png)
+![Form](img/inputs.png)
 
 ### Prediction Output  
-![Result](screenshots/result.png)
+![Result](img/result.png)
 
 ---
 
@@ -82,7 +82,7 @@ The app uses a **Random Forest Classifier** trained on the [Heart Disease 2020 d
 
 1. Launch the app in your browser.
 2. Fill in the patient information in the input form.
-3. Click **"Predict Risk"** to see the result.
+3. Click **"Check Risk"** to see the result.
 4. View the risk classification, confidence score, and feature importance chart.
 
 ---
